@@ -23,6 +23,11 @@ export class ProductListComponent implements OnInit {
         this._listFilter = value.toLowerCase();
         this.filteredProducts = this.performFiltering();
     }
+
+    changeTitle(message: string): void {
+        this.pageTitle = 'Product List: ' + message;
+        console.log(message);
+    }
     
     products: IProduct[] = [
         {
@@ -91,5 +96,6 @@ export class ProductListComponent implements OnInit {
     toggleImage(): void {
         this.isShowImages = !this.isShowImages;
     }
+
 
 }
